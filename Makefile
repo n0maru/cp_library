@@ -199,15 +199,7 @@ r4:
 	./a < in3.txt
 	./a < in4.txt
 
-at:
-	-rm -f *.exe
-	rm -f a.cpp
-	rm -f b.cpp
-	rm -f c.cpp
-	rm -f d.cpp
-	rm -f e.cpp
-	rm -f f.cpp
-	rm -f g.cpp
+at: clean
 	cp template.cpp a.cpp
 	cp template.cpp b.cpp
 	cp template.cpp c.cpp
@@ -219,3 +211,16 @@ at:
 	touch in2.txt
 	touch in3.txt
 	touch in4.txt
+clean:
+	-rm -f *.exe
+	rm -f a.cpp
+	rm -f b.cpp
+	rm -f c.cpp
+	rm -f d.cpp
+	rm -f e.cpp
+	rm -f f.cpp
+	rm -f g.cpp
+	rm -f in1.txt
+	rm -f in2.txt
+	rm -f in3.txt
+	rm -f in4.txt
