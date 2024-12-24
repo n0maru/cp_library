@@ -215,3 +215,7 @@ at:
 	cp template.cpp e.cpp
 	cp template.cpp f.cpp
 	cp template.cpp g.cpp
+	touch in1.txt
+	touch in2.txt
+	touch in3.txt
+	touch in4.txt
