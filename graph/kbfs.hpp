@@ -1,13 +1,14 @@
 #pragma once
+#include "../other/const.hpp"
 #include "graph.hpp"
 
 // test: https://atcoder.jp/contests/arc005/submissions/61071912
 // O( k(V+E) )
-vector<ll> kbfs(const graph& g, int start, int k) {
+template <class T>
+vector<T> kbfs(const graph<T>& g, int start, int k) {
     int n = g.size();
-    ll inf = 1e18;
     deque<queue<int>> qs(k);
-    vector<ll> dis(n, inf);
+    vector<ll> dis(n, inf<T>);
     vector<bool> vis(n);
 
     int item_num = 1;

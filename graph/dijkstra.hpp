@@ -1,12 +1,12 @@
 #pragma once
 #include "graph.hpp"
 
-// 未テスト
+// aoj GRL-1-A
 // O((V+E) logV)
-vector<ll> dijkstra(const graph& g, int start) {
+template <class T>
+vector<T> dijkstra(const graph<T>& g, int start) {
     int n = g.size();
-    ll inf = 1e18;
-    vector<ll> dis(n, inf);
+    vector<ll> dis(n, inf<T>);
     priority_queue<pll> pq;
     dis[start] = 0;
     pq.emplace(0, start);

@@ -1,21 +1,25 @@
 #pragma once
 
+template <class T>
 struct edge {
     int to;
-    ll cost;
+    T cost;
     int id;
-    edge(int to, ll cost = 1, int id = -1) : to(to), cost(cost), id(id) {}
+    edge(int to, T cost = 1, int id = -1) : to(to), cost(cost), id(id) {}
 };
-using graph = vector<vector<edge>>;
-ostream& operator <<(ostream& out, const edge& e) {
+template <class T> using graph = vector<vector<edge<T>>>;
+using gll = graph<ll>;
+using gint = graph<int>;
+template <class T>
+ostream& operator <<(ostream& out, const edge<T>& e) {
     out << '[' << e.to << ' ' << e.cost << ' ' << e.id << ']';
     return out;
 }
 
-// 未テスト
 // 重み無しグラフに変換
 // O(V+E)
-vector<vector<int>> convert_uw(const graph& g) {
+template <class T>
+vector<vector<int>> convert_uw(const graph<T>& g) {
     int n = g.size();
     vector<vector<int>> res(n);
     for (int i = 0; i < n; ++i) {
