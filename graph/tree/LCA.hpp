@@ -1,3 +1,10 @@
+#pragma once
+#include "../graph.hpp"
+
+// test: https://judge.yosupo.jp/submission/258368
+/*
+最小共通祖先をダブリングにより求める
+*/
 class LCA {
 public:
     int log;
