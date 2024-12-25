@@ -8,7 +8,7 @@
 class LCA {
 public:
     int log;
-    vector<vector<int>> g;
+    uwgraph g;
     vector<vector<int>> par;
     vector<int> dist;
 

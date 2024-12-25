@@ -224,3 +224,4 @@ clean:
 	rm -f in2.txt
 	rm -f in3.txt
 	rm -f in4.txt
+	rm -f submit.cpp

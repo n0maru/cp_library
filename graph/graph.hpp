@@ -10,6 +10,7 @@ struct edge {
 template <class T> using graph = vector<vector<edge<T>>>;
 using gll = graph<ll>;
 using gint = graph<int>;
+using uwgraph = vector<vector<int>>;
 template <class T>
 ostream& operator <<(ostream& out, const edge<T>& e) {
     out << '[' << e.to << ' ' << e.cost << ' ' << e.id << ']';
@@ -19,9 +20,9 @@ ostream& operator <<(ostream& out, const edge<T>& e) {
 // 重み無しグラフに変換
 // O(V+E)
 template <class T>
-vector<vector<int>> convert_uw(const graph<T>& g) {
+uwgraph convert_uw(const graph<T>& g) {
     int n = g.size();
-    vector<vector<int>> res(n);
+    uwgraph res(n);
     for (int i = 0; i < n; ++i) {
         for (auto&& e : g[i]) {
             res[i].push_back(e.to);

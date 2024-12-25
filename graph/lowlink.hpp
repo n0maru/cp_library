@@ -19,18 +19,14 @@ struct lowlink
     : n(n)
 	{
 		g.resize(n);
+		ord.resize(n);
+		low.assign(n, n + 1);
 		for (auto& [a,b] : e)
 		{
 			edge e1{b, (int)g[b].size(), 0}, e2{a, (int)g[a].size(), 0};
 			g[a].push_back(e1);
 			g[b].push_back(e2);
 		}
-        init();
-	}
-private:
-    void init() {
-		ord.resize(n);
-		low.assign(n, n + 1);
 
         num = 0;
 		for (int i = 0; i < n; ++i)
@@ -62,7 +58,8 @@ private:
 			}
 			if (flag) art.push_back(i);
 		}
-    }
+	}
+private:
 	void dfs(int now)
 	{
 		ord[now] = ++num;
