@@ -16,7 +16,7 @@ vector<T> kbfs(const graph<T>& g, int start, int k) {
     dis[start] = 0;
 
     while (item_num > 0) {
-        while (qs[0].empty()) {
+        while (qs[0].empty) {
             qs.pop_front();
             qs.emplace_back();
         }

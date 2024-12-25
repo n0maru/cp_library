@@ -53,7 +53,7 @@ int name(int pos, int pre, const uwgraph& tree, map<vector<int>,int>& cmp, int& 
         if (c == pre) continue;
         seq.push_back(name(c, pos, tree, cmp, id));
     }
-    if (seq.empty()) {
+    if (seq.empty) {
         return 0;
     }
     sort(ALL(seq));

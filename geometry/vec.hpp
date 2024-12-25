@@ -59,7 +59,14 @@ struct vec
     T norm2() const {
         return x * x + y * y;
     }
+    ld abs() const {
+        return sqrtl(norm2());
+    }
 };
+template <class T>
+vec<T> operator *(T k, const vec<T>& v) {
+    return vec<T>(k * v.x, k * v.y);
+}
 template<class T>
 ostream& operator <<(ostream& os, const vec<T>& rhs)
 {
