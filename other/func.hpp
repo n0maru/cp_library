@@ -6,7 +6,7 @@ template <class F, class S> ostream& operator<<(ostream &os, const pair<F,S>& p)
 void YesNo(bool ans) { cout << (ans ? "Yes" : "No") << '\n'; }
 void YESNO(bool ans) { cout << (ans ? "YES" : "NO") << '\n'; }
 
-#ifndef ONLINE_JUDGE
+#ifdef LOCAL
 
 template <class T> void dbgv(const vector<T>& v) { for (auto&& i : v) { cerr << i << ' '; } cerr << endl; }
 template <class T> void dbgvv(const vector<vector<T>>& v) { for (auto&& i : v) { for (auto&& j : i) { cerr << j << ' '; } cerr << endl; } }
