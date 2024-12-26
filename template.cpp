@@ -11,6 +11,7 @@ using pll = pair<ll, ll>;
 #define ALL(v) v.begin(),v.end()
 #define sq(x) ((x) * (x))
 #include "other/func.hpp"
+#include "other/const.hpp"
 
 int main() {
     
