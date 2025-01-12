@@ -1,4 +1,3 @@
-#pragma once
 struct BIT2D {
     // 全てのマスを0で初期化
     // O(hw)

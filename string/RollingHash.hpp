@@ -1,5 +1,3 @@
-#pragma once
-
 struct RollingHash {
 private:
     using ull = unsigned long long;

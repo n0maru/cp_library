@@ -1,4 +1,3 @@
-#pragma once
 ll modpow(ll x, ll n, ll mod) {
     x %= mod;
     ll res = 1;

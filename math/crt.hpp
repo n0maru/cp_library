@@ -1,5 +1,3 @@
-#pragma once
-
 //(val, lcm(m1, m2)): val=b1(mod m1), val=b2(mod m2)
 // 解なしの場合は (0, -1) をリターン
 std::pair<long long, long long> crt(long long b1, long long m1, long long b2, long long m2)

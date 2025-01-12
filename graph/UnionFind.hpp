@@ -1,5 +1,3 @@
-#pragma once
-
 // test: https://atcoder.jp/contests/abc383/submissions/61073604
 /*
 S の要件

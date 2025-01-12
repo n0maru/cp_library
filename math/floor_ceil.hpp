@@ -1,4 +1,3 @@
-#pragma once
 // a/bの結果を正の方向へ丸める
 ll ceil(ll x, ll y) {
     assert(y != 0);

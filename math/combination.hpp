@@ -1,4 +1,3 @@
-#pragma once
 class Comb
 {
   int siz, mod;

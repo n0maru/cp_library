@@ -1,8 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-using ll = long long;
-
 // 使用例は以下のmain関数に記載
 
 // Mo's algorithm

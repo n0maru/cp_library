@@ -1,5 +1,3 @@
-#pragma once
-
 // returns[i] ... s[0..n]とs[i..n]の最長共通接頭辞(lcp)の長さ
 // O(|s|)
 std::vector<int> Z_algorithm(std::string &s)

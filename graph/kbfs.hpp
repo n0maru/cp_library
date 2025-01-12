@@ -1,6 +1,4 @@
-#pragma once
-#include "../other/const.hpp"
-#include "graph.hpp"
+// #include "graph.hpp"
 
 // test: https://atcoder.jp/contests/arc005/submissions/61285177
 // O( k(V+E) )

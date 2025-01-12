@@ -1,5 +1,3 @@
-#pragma once
-
 struct SuffixArray {
     // 接尾辞配列の構築
     // O(|S|log|S|)

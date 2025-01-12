@@ -1,5 +1,4 @@
-#pragma once
-#include "graph.hpp"
+// #include "graph.hpp"
 
 // aoj GRL-1-A
 // O((V+E) logV)
