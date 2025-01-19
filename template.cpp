@@ -17,17 +17,19 @@ void YESNO(bool ans) { cout << (ans ? "YES" : "NO") << '\n'; }
 #define UNIQUE(v) sort(ALL(v)); v.erase(unique(ALL(v)), v.end());
 
 #ifdef LOCAL
-template <class T> void dbgv(const vector<T>& v) { for (auto&& i : v) { cerr << i << ' '; } cerr << endl; }
+template <class T> void dbgv(const vector<T>& v) { cerr << "\033[31m"; for (auto&& i : v) { cerr << i << ' '; } cerr << "\033[m" << endl; }
 template <class T> void dbgvv(const vector<vector<T>>& v) { for (auto&& i : v) { for (auto&& j : i) { cerr << j << ' '; } cerr << endl; } }
 template <class T, size_t U> void dbga(const array<T,U>& v) { for (auto&& i : v) { cerr << i << ' '; } cerr << endl; }
 void dbg() { cerr << endl; }
 template <class Head, class... Tail> void dbg(const Head& head, const Tail& ...tail) { cerr << head << ' '; dbg(tail...); }
+void grid(const vector<string>& g) { for (auto&& line : g) { cerr << line << endl; } }
 #else
 template <class T> void dbgv(const vector<T>&) {}
 template <class T> void dbgvv(const vector<vector<T>>&) {}
 template <class T, size_t U> void dbga(const array<T,U>&) {}
 void dbg() {}
-template <class Head, class... Tail> void dbg(const Head& head, const Tail& ...tail) {}
+template <class Head, class... Tail> void dbg(const Head&, const Tail& ...) {}
+void grid(const vector<string>&) {}
 #endif
 
 template <class T> static constexpr T inf = numeric_limits<T>::max() / 2;
