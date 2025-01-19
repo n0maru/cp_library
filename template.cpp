@@ -14,6 +14,7 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a=b; return true; 
 template <class F, class S> ostream& operator<<(ostream &os, const pair<F,S>& p) { return os << '(' << p.first << ',' << p.second << ')'; }
 void YesNo(bool ans) { cout << (ans ? "Yes" : "No") << '\n'; }
 void YESNO(bool ans) { cout << (ans ? "YES" : "NO") << '\n'; }
+#define UNIQUE(v) sort(ALL(v)); v.erase(unique(ALL(v)), v.end());
 
 #ifdef LOCAL
 template <class T> void dbgv(const vector<T>& v) { for (auto&& i : v) { cerr << i << ' '; } cerr << endl; }
