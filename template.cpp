@@ -43,5 +43,7 @@ int dy8[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
 
 
 int main() {
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+
     
 }
