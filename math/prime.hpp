@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 struct Prime {
     int size;
     vector<bool> isPrime;
