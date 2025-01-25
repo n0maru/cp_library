@@ -23,6 +23,7 @@ template <class T, size_t U> void dbga(const array<T,U>& v) { for (auto&& i : v)
 void dbg() { cerr << endl; }
 template <class Head, class... Tail> void dbg(const Head& head, const Tail& ...tail) { cerr << head << ' '; dbg(tail...); }
 void grid(const vector<string>& g) { for (auto&& line : g) { cerr << line << endl; } }
+template <class Iter> void dbgall(Iter begin, Iter end) { for (auto it = begin; it != end; ++it) { cerr << *it << ' '; } cerr << endl; }
 #else
 template <class T> void dbgv(const vector<T>&) {}
 template <class T> void dbgvv(const vector<vector<T>>&) {}
@@ -30,6 +31,7 @@ template <class T, size_t U> void dbga(const array<T,U>&) {}
 void dbg() {}
 template <class Head, class... Tail> void dbg(const Head&, const Tail& ...) {}
 void grid(const vector<string>&) {}
+template <class Iter> void dbgall(Iter, Iter) {}
 #endif
 
 template <class T> static constexpr T inf = numeric_limits<T>::max() / 2;
