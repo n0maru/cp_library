@@ -15,7 +15,7 @@ ostream& operator <<(ostream& out, const edge<T>& e) {
     return out;
 }
 
-// 重み無しグラフに変換
+// convert to unweighted graph
 // O(V+E)
 template <class T>
 uwgraph convert_uw(const graph<T>& g) {
@@ -27,4 +27,18 @@ uwgraph convert_uw(const graph<T>& g) {
         }
     }
     return res;
+}
+
+template <class T>
+struct edge2 {
+    int from;
+    int to;
+    T cost;
+    int id;
+    edge2(int from, int to, T cost = 1, int id = -1) : from(from), to(to), cost(cost), id(id) {}
+};
+template <class T>
+ostream& operator <<(ostream& out, const edge2<T>& e) {
+    out << '[' << e.from << ' ' << e.to << ' ' << e.cost << ' ' << e.id << ']';
+    return out;
 }
